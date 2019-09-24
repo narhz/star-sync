@@ -9,25 +9,23 @@ import devconfig
 def sync():
     if os.path.exists(devconfig.LINUX_PATH):
         repo = Repo(devconfig.LINUX_PATH)
-        origin = repo.remotes.origin
 
-        origin.pull()
-
-        repo.git.add('-A')
-        repo.git.commit('-m', 'updated')
-        origin.push()
-
-
-    if print(os.path.exists(devconfig.PHONE_PATH)):
+    if os.path.exists(devconfig.PHONE_PATH):
         repo = Repo(devconfig.PHONE_PATH)
 
-        origin = repo.remotes.origin
+    origin = repo.remotes.origin
 
+    try:
         origin.pull()
+    except Exception as e:
+        print(e)
 
+    try:
         repo.git.add('-A')
         repo.git.commit('-m', 'updated')
         origin.push()
+    except Exception as e:
+        print(e)
 
 
 if __name__ == '__main__':
