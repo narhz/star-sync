@@ -17,7 +17,8 @@ def sync():
         repo.git.commit('-m', 'updated')
         origin.push()
 
-    if os.path.exists(devconfig.PHONE_PATH):
+
+    if print(os.path.exists(devconfig.PHONE_PATH)):
         repo = Repo(devconfig.PHONE_PATH)
 
         origin = repo.remotes.origin
