@@ -1,8 +1,7 @@
-class Config:
-    REPO = ''
+REPO = ''
 
-    PHONE_PATH = '~/storage/shared/StardewValley/stardew-valley-sync'
+PHONE_PATH = '~/storage/shared/StardewValley'
 
-    LINUX_PATH = '~/.config/StardewValley/Saves'
+LINUX_PATH = '~/.config/StardewValley/Saves'
 
-    WIN_PATH = '%appdata%\\StardewValley\\Saves'
+WIN_PATH = '%appdata%\\StardewValley\\Saves'
